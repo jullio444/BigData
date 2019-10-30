@@ -92,6 +92,10 @@ public class WordCount {
 		return reducerInputs;
 	}
 	
+	public int getPartition(String key){
+		return Math.abs(key.hashCode()% r);
+	}
+	
 	public static void main(String[] args) {
 		WordCount w = new WordCount();
 		w.jobTracker();
@@ -119,10 +123,6 @@ public class WordCount {
 			System.out.println("Reducer "+ reducerOutputs.indexOf(r) +" output");
 			r.forEach(System.out::print);
 		}
-	}
-	
-	public int getPartition(String key){
-		return Math.abs(key.hashCode()% r);
 	}
 
 }
