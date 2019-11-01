@@ -97,7 +97,7 @@ public class InMapperWordCount {
 		return Math.abs(key.hashCode() % r);
 	}
 
-	public void shuffleReduce() {
+	public void reduceHandler() {
 		List<List<Pair<String, Integer>>> listOfPairsSentToReducers = pairsSentToReducers();
 		List<List<GroupByPair<String, List<Integer>>>> reducerInputs = new ArrayList<>();
 
@@ -126,7 +126,7 @@ public class InMapperWordCount {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		InMapperWordCount w = new InMapperWordCount();
-		w.shuffleReduce();
+		w.reduceHandler();
 	}
 
 }
