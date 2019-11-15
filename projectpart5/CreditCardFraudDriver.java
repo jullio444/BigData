@@ -27,11 +27,11 @@ public class CreditCardFraudDriver {
 
 		@Override
 		protected void map(Text key, Text value, Context context) throws IOException, InterruptedException {
-			String taxiData[] = value.toString().split(",");
-			occurencies.set(Integer.parseInt(taxiData[3]));
+			String creditData[] = value.toString().split(",");
+			occurencies.set(Integer.parseInt(creditData[3]));
 			creditcard = new CreditCardWritable();
-			creditcard.setSupermarket(new Text(taxiData[0]));
-			creditcard.setCity(new Text(taxiData[1]));
+			creditcard.setSupermarket(new Text(creditData[0]));
+			creditcard.setCity(new Text(creditData[1]));
 
 			context.write(creditcard, occurencies);
 			System.out.println("< " + creditcard + " , " + occurencies + " >");
