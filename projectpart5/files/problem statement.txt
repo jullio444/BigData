@@ -1,2 +1,7 @@
-Walmart wants to know which city committed the most frauds with misuse of a particular credit card and want to analyze the results in the different cities. Based on results they will analyze results and they will stop accepting usage of that particular credit card in certain cities. Walmart has provided certain data for the past few months and it needs to be parsed as input data and give the names of the cities where more fraud occured.
+Walmart wants to know which city committed the most frauds with misuse 
+of a particular credit card and want to analyze the results in the different 
+cities. Based on results they will analyze results and they will stop 
+accepting usage of that particular credit card in certain cities. Walmart 
+has provided certain data for the past few months and it needs to be parsed 
+as input data and give the names of the cities where more fraud occured.
 
